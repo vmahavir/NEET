@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🏆 Comprehensive College Ranking · Physiotherapy · Maharashtra</title>
+    <!-- Google Font & basic reset -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #f6f9fc;
+            padding: 2rem 1rem;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        /* header */
+        .header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            background: linear-gradient(145deg, #0b2b4a, #1a4b6d);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: inline-block;
+            padding: 0 0.5rem;
+        }
+
+        .header .sub {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #475569;
+            background: #e9eef3;
+            display: inline-block;
+            padding: 0.4rem 1.6rem;
+            border-radius: 40px;
+            margin-top: 0.5rem;
+            backdrop-filter: blur(2px);
+            letter-spacing: 0.3px;
+        }
+
+        .header .sub i {
+            font-style: normal;
+            background: #1e4a6b;
+            color: white;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0 0.2rem;
+        }
+
+        /* grid + cards */
+        .rank-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .rank-card {
+            background: white;
+            border-radius: 28px;
+            padding: 1.6rem 2rem;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(2px);
+            transition: all 0.2s ease;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: flex-start;
+            gap: 0.5rem 1.2rem;
+        }
+
+        .rank-card:hover {
+            box-shadow: 0 20px 35px rgba(18, 52, 77, 0.08);
+            border-color: #d0e2f0;
+            transform: translateY(-2px);
+        }
+
+        .rank-number {
+            font-weight: 700;
+            font-size: 1.8rem;
+            background: #eef4fa;
+            color: #1e4a6b;
+            width: 58px;
+            height: 58px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 40px;
+            flex-shrink: 0;
+            background: linear-gradient(135deg, #e2edf8, #d3e2f0);
+            box-shadow: inset 0 1px 3px rgba(255,255,255,0.7);
+        }
+
+        .rank-content {
+            flex: 1;
+            min-width: 220px;
+        }
+
+        .rank-content .college-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #0b2b4a;
+            letter-spacing: -0.01em;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0.5rem 0.8rem;
+        }
+
+        .rank-content .college-name .badge {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: #1e4a6b;
+            color: white;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+            text-transform: uppercase;
+        }
+
+        .rank-content .college-name .badge.gold {
+            background: #b8860b;
+        }
+
+        .rank-content .college-name .badge.silver {
+            background: #4b5b6c;
+        }
+
+        .rank-content .college-name .badge.bronze {
+            background: #8b6b4b;
+        }
+
+        .key-strengths {
+            margin-top: 0.6rem;
+            font-size: 0.98rem;
+            line-height: 1.6;
+            color: #1e3a5a;
+            background: #f1f6fb;
+            padding: 0.8rem 1.2rem;
+            border-radius: 20px;
+            border-left: 4px solid #2d6a9b;
+        }
+
+        .key-strengths strong {
+            font-weight: 700;
+            color: #0f344e;
+        }
+
+        .bottom-list-section {
+            margin-top: 3rem;
+            background: white;
+            border-radius: 32px;
+            padding: 2rem 2rem 2rem 2rem;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.02);
+            border: 1px solid #e6edf4;
+        }
+
+        .bottom-list-section h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #1e3a5a;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .bottom-list-section h2 span {
+            background: #dce8f2;
+            padding: 0.1rem 1rem;
+            border-radius: 40px;
+            font-size: 1rem;
+            color: #1a4b6b;
+        }
+
+        .grid-names {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 0.8rem 1.8rem;
+            list-style: none;
+        }
+
+        .grid-names li {
+            font-size: 1rem;
+            padding: 0.4rem 0 0.4rem 1.8rem;
+            border-bottom: 1px dashed #e2eaf2;
+            position: relative;
+            color: #1e3f5c;
+            font-weight: 500;
+        }
+
+        .grid-names li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2d6a9b;
+            font-weight: 700;
+            opacity: 0.7;
+        }
+
+        .grid-names li:last-child {
+            border-bottom: none;
+        }
+
+        .footnote {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: #5e6f82;
+            background: #f0f5fa;
+            padding: 1rem 1.8rem;
+            border-radius: 50px;
+            display: inline-block;
+            backdrop-filter: blur(2px);
+            border: 1px solid #d6e3ef;
+        }
+
+        .footnote i {
+            font-style: normal;
+            background: #1e4a6b;
+            color: white;
+            padding: 0.1rem 0.8rem;
+            border-radius: 30px;
+            font-weight: 600;
+            margin: 0 0.1rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 2px dotted #d3e0eb;
+            margin: 1.2rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 680px) {
+            .rank-card {
+                padding: 1.2rem 1.2rem;
+                flex-direction: column;
+                align-items: stretch;
+            }
+            .rank-number {
+                width: 48px;
+                height: 48px;
+                font-size: 1.5rem;
+            }
+            .rank-content .college-name {
+                font-size: 1.2rem;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+            .bottom-list-section {
+                padding: 1.5rem 1.2rem;
+            }
+            .grid-names {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .badge-small {
+            background: #cfdeec;
+            color: #1a3c57;
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.9rem;
+            border-radius: 20px;
+            margin-left: 0.3rem;
+            white-space: nowrap;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <!-- header -->
+    <div class="header">
+        <h1>🏆 Physiotherapy · Maharashtra</h1>
+        <div class="sub">
+            <i> Comprehensive College Ranking </i> — based on reputation, accreditations &amp; clinical infrastructure
+        </div>
+    </div>
+
+    <!-- ranking list -->
+    <div class="rank-grid">
+
+        <!-- 1 -->
+        <div class="rank-card">
+            <div class="rank-number">1</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    MGM Institute of Physiotherapy, Aurangabad
+                    <span class="badge gold">NAAC A</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🔬 First physiotherapy college in India with NAAC ‘A’ grade</strong> · Excellent clinical training, “perfect place for learning” · consistently ranked among top private colleges in Maharashtra.
+                </div>
+            </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="rank-card">
+            <div class="rank-number">2</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    D.E.S. Brijlal Jindal College of Physiotherapy, Pune
+                    <span class="badge silver">Heritage</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🏛️ 134+ year legacy of Deccan Education Society</strong> · 60+ university rank holders · on-campus OPD, dedicated placement cell · nature-filled campus with smart infrastructure.
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="rank-card">
+            <div class="rank-number">3</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    Terna Charitable Trust College of Physiotherapy, Navi Mumbai
+                    <span class="badge bronze">Est. 1992</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>📅 One of the oldest physiotherapy colleges in Maharashtra</strong> · IIRF ranked · strong institutional reputation &amp; robust campus ecosystem.
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="rank-card">
+            <div class="rank-number">4</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    Lokmanya Medical College of Physiotherapy, Kharghar
+                    <span class="badge-small">Lokmanya group</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🏥 Part of reputed Lokmanya medical group</strong> · parent institute ranked #72 in India (Medical) · strong brand value and clinical exposure.
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="rank-card">
+            <div class="rank-number">5</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    Dr. Vithalrao Vikhe Patil Foundation's College of Physiotherapy, Ahmadnagar
+                    <span class="badge-small">Multi-specialty hospital</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🏫 Prominent educational foundation</strong> · attached multi-specialty hospital for clinical training · key institution for paramedical education in the region.
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="rank-card">
+            <div class="rank-number">6</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    St. Andrews College Of Physiotherapy, Pune
+                    <span class="badge-small">RCI approved</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>⭐ Established 2017 · RCI approval</strong> · student review: “really good” (6.2/10) · steadily building reputation in Pune.
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="rank-card">
+            <div class="rank-number">7</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    SVICT's B. K. L. Walawalkar College Of Physiotherapy, Chiplun, Ratnagiri
+                    <span class="badge-small">Konkan region</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🌿 Decent regional option</strong> · serves the Konkan area · fee ~₹1.10 Lakh · lacks national accreditations but solid local presence.
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="rank-card">
+            <div class="rank-number">8</div>
+            <div class="rank-content">
+                <div class="college-name">
+                    Suryadatta Institute of Health Sciences, Bavdhan, Pune
+                    <span class="badge-small">Suryadatta group</span>
+                </div>
+                <div class="key-strengths">
+                    <strong>🏢 Part of Suryadatta education &amp; healthcare group</strong> · decent option in Pune · further reputation data limited.
+                </div>
+            </div>
+        </div>
+
+        <!-- separator before 9-32 list -->
+        <hr style="margin: 0.8rem 0 0.2rem 0;">
+
+    </div> <!-- end rank-grid -->
+
+    <!-- list 9-32 -->
+    <div class="bottom-list-section">
+        <h2>
+            <span>⏺ 9 – 32</span> 
+            Other notable colleges (ranked alphabetically · full list)
+        </h2>
+        <ul class="grid-names">
+            <li>Anand College Of Physiotherapy, Vajjapur, Aurangabad</li>
+            <li>Aurangabad College of Physiotherapy, Bhalgaon, Aurangabad</li>
+            <li>Dr. N.Y. Tasgaonkar College of Physiotherapy, Karjat, Raigad</li>
+            <li>Gokhale Education Society's, Sir Dr. M.S. Gosavi College of Physiotherapy and Health Care Management, Nashik</li>
+            <li>Horizon College Of Physiotherapy, Nanded</li>
+            <li>Industrial College of Physiotherapy, Pune</li>
+            <li>Late Bhaiyysaaheh Ghorpade Institute of Physiotherapy, Karad, Satara</li>
+            <li>M V P College of Physiotherapy, Adgaon, Nashik</li>
+            <li>Motiwala College of Physiotherapy, Nashik</li>
+            <li>Nashik College Of Physiotherapy Nashik, Aurangabad</li>
+            <li>Niharikaa College of Physiotherapy, Nagpur</li>
+            <li>Ojas College of Physiotherapy (B.PTh), Jaina</li>
+            <li>Oyster College Of Physiotherapy, Jaina Road, Aurangabad</li>
+            <li>Progressive Education Society's Modern College of Physiotherapy, Pune</li>
+            <li>Pruthviraj Deshmukh College of Physiotherapy, Yavatmal</li>
+            <li>Rashtrasant Janardhan Swami College of Physiotherapy, Kopargaon, Ahmednagar</li>
+            <li>Royal College of Physiotherapy, Malegaon, Nashik</li>
+            <li>Sai Care College Of Physiotherapy, Dindori, Nashik</li>
+            <li>Shree Siddheshwar College of Physiotherapy, Solapur</li>
+            <li>Shri Sai Janvikas Prathisthans Wellness College Of Physiotherapy, Dharashiv</li>
+            <li>Tanmayi College Of Physiotherapy Satana, Nashik</li>
+            <li>The Sia College Of Health Sciences, College Of Physiotherapy, Dombivili</li>
+            <li>Vaidyanath Institute Of Physiotherapy, Parli, Beed</li>
+            <li>Vasantprabha College Of Physiotherapy Buldana</li>
+        </ul>
+
+        <div class="footnote">
+            <i>📌</i> Based on reputation, accreditations (NAAC, NIRF, heritage), clinical infrastructure &amp; recruitment potential.
+            Fee not considered · colleges within 9–32 are solid regional options with varied strengths.
+        </div>
+    </div>
+
+    <!-- additional note: D.Y. Patil Kolhapur (top contender) -->
+    <div style="margin-top: 2rem; background: #e4eef9; padding: 1rem 2rem; border-radius: 60px; text-align: center; border: 1px solid #c5d9ec;">
+        <span style="font-weight: 600; color: #1a3f5c;">🏅 D. Y. Patil Education Society, Kolhapur</span> 
+        <span style="color: #1f486b; margin: 0 0.3rem;">·</span> 
+        <span style="font-weight: 500;">NAAC ‘A++’ · 810-bed hospital · would rank in Tier 1 (not in FRA list 2025-26)</span>
+    </div>
+
+</div> <!-- container -->
+</body>
+</html>
