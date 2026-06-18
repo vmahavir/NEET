@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAMS Cutoff Comparison: Maharashtra 2025 vs 2024 (Opening & Closing)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background: #f4f9fc;
+            font-family: 'Segoe UI', Roboto, system-ui, sans-serif;
+            padding: 2rem 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .container {
+            max-width: 1400px;
+            width: 100%;
+            background: white;
+            border-radius: 28px;
+            box-shadow: 0 20px 40px -12px rgba(0,20,40,0.25);
+            padding: 2rem 1.8rem;
+            transition: all 0.2s;
+        }
+        h1 {
+            font-size: 1.9rem;
+            font-weight: 600;
+            color: #0b2b44;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            border-bottom: 3px solid #0f6b8c;
+            padding-bottom: 0.75rem;
+            margin-bottom: 1.8rem;
+            flex-wrap: wrap;
+        }
+        h1 small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #2a5f7a;
+            margin-left: 0.75rem;
+            background: #e5f0f7;
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+        }
+        .year-badge {
+            display: inline-block;
+            font-weight: 600;
+            font-size: 0.7rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+        }
+        .badge-2025 {
+            background: #0f6b8c;
+            color: white;
+        }
+        .badge-2024 {
+            background: #b0c9d9;
+            color: #0a2d3f;
+        }
+        .table-responsive {
+            overflow-x: auto;
+            margin-top: 0.5rem;
+            border-radius: 18px;
+            border: 1px solid #e2edf4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.9rem;
+            min-width: 900px;
+        }
+        th {
+            background: #e6f0f7;
+            color: #0b2b44;
+            font-weight: 600;
+            padding: 0.9rem 0.6rem;
+            text-align: center;
+            border-bottom: 2px solid #c4dae8;
+        }
+        td {
+            padding: 0.75rem 0.5rem;
+            border-bottom: 1px solid #e2edf4;
+            vertical-align: middle;
+            text-align: center;
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        .college-name {
+            font-weight: 500;
+            color: #0b2b44;
+            text-align: left;
+            min-width: 200px;
+            padding-left: 0.8rem;
+        }
+        .rank-cell {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+            font-weight: 500;
+            padding: 0.2rem 0.6rem;
+            border-radius: 30px;
+            display: inline-block;
+            font-size: 0.85rem;
+        }
+        .rank-open {
+            background: #e1edf5;
+            color: #074362;
+        }
+        .rank-close {
+            background: #d4e4ef;
+            color: #053d5a;
+        }
+        .rank-2024-open {
+            background: #eef3f7;
+            color: #1a4b64;
+        }
+        .rank-2024-close {
+            background: #e2eaf0;
+            color: #0f3f57;
+        }
+        .gap-badge {
+            background: #f0f6fa;
+            padding: 0.15rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: #1f5a78;
+            white-space: nowrap;
+        }
+        .only-year {
+            background: #f3f7fa;
+            color: #3b6b85;
+            font-size: 0.7rem;
+            padding: 0.15rem 0.8rem;
+            border-radius: 30px;
+            display: inline-block;
+        }
+        .footnote {
+            margin-top: 1.8rem;
+            padding: 1rem 1.2rem;
+            background: #f2f8fc;
+            border-radius: 18px;
+            font-size: 0.9rem;
+            color: #1b4b66;
+            border-left: 5px solid #0f6b8c;
+        }
+        .footnote strong {
+            color: #05354d;
+        }
+        .year-group-header {
+            background: #f2f7fb;
+            font-weight: 600;
+            color: #124a64;
+            letter-spacing: 0.3px;
+        }
+        .sub-header {
+            font-weight: 400;
+            font-size: 0.7rem;
+            color: #2d627d;
+            display: block;
+            margin-top: 2px;
+        }
+        @media (max-width: 700px) {
+            .container { padding: 1.2rem; }
+            h1 { font-size: 1.3rem; }
+            td, th { padding: 0.5rem 0.3rem; font-size: 0.78rem; }
+            .college-name { min-width: 140px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>
+        📊 BAMS Cutoff · Maharashtra
+        <small>Opening & Closing Ranks · 2025 vs 2024</small>
+    </h1>
+
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th rowspan="2" style="text-align:left; min-width:200px;">Ayurvedic College</th>
+                    <th colspan="2" style="background:#d1e4ef;"><span class="badge-2025 year-badge">2025</span> Cutoff</th>
+                    <th colspan="2" style="background:#dce8f0;"><span class="badge-2024 year-badge">2024</span> Cutoff</th>
+                    <th rowspan="2" style="min-width:90px;">Availability</th>
+                </tr>
+                <tr>
+                    <th style="background:#d1e4ef; font-weight:500;">Opening</th>
+                    <th style="background:#d1e4ef; font-weight:500;">Closing</th>
+                    <th style="background:#dce8f0; font-weight:500;">Opening</th>
+                    <th style="background:#dce8f0; font-weight:500;">Closing</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ===== BOTH YEARS ===== -->
+                <tr>
+                    <td class="college-name">Podar Ayurved Medical College, Mumbai</td>
+                    <td><span class="rank-cell rank-open">27,195</span></td>
+                    <td><span class="rank-cell rank-close">63,227</span></td>
+                    <td><span class="rank-cell rank-2024-open">46,735</span></td>
+                    <td><span class="rank-cell rank-2024-close">51,551</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Tilak Ayurved Mahavidyalaya, Pune</td>
+                    <td><span class="rank-cell rank-open">47,624</span></td>
+                    <td><span class="rank-cell rank-close">81,701</span></td>
+                    <td><span class="rank-cell rank-2024-open">47,334</span></td>
+                    <td><span class="rank-cell rank-2024-close">51,323</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Government Ayurved College and Hospital, Nagpur</td>
+                    <td><span class="rank-cell rank-open">53,824</span></td>
+                    <td><span class="rank-cell rank-close">89,354</span></td>
+                    <td><span class="rank-cell rank-2024-open">49,856</span></td>
+                    <td><span class="rank-cell rank-2024-close">50,950</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Government Ayurveda College and Hospital, Baramati</td>
+                    <td><span class="rank-cell rank-open">68,410</span></td>
+                    <td><span class="rank-cell rank-close">96,571</span></td>
+                    <td><span class="rank-cell rank-2024-open">55,385</span></td>
+                    <td><span class="rank-cell rank-2024-close">75,242</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Government Ayurved College, Nanded</td>
+                    <td><span class="rank-cell rank-open">81,034</span></td>
+                    <td><span class="rank-cell rank-close">89,739</span></td>
+                    <td><span class="rank-cell rank-2024-open">48,754</span></td>
+                    <td><span class="rank-cell rank-2024-close">49,667</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Ayurved Mahavidyalaya, Nashik</td>
+                    <td><span class="rank-cell rank-open">81,640</span></td>
+                    <td><span class="rank-cell rank-close">93,030</span></td>
+                    <td><span class="rank-cell rank-2024-open">48,063</span></td>
+                    <td><span class="rank-cell rank-2024-close">54,752</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">S C Mutha Aryangla Vaidyak Mahavidyalaya, Satara</td>
+                    <td><span class="rank-cell rank-open">83,359</span></td>
+                    <td><span class="rank-cell rank-close">104,447</span></td>
+                    <td><span class="rank-cell rank-2024-open">59,267</span></td>
+                    <td><span class="rank-cell rank-2024-close">70,196</span></td>
+                    <td><span class="gap-badge">✅ both years</span></td>
+                </tr>
+
+                <!-- ===== 2025 ONLY ===== -->
+                <tr>
+                    <td class="college-name">Ayurved Mahavidyalaya and Seth R V Ayurved Hospital, Mumbai</td>
+                    <td><span class="rank-cell rank-open">37,824</span></td>
+                    <td><span class="rank-cell rank-close">81,820</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="only-year">2025 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Late Babruwan Vitthalrao Kale Manjara Ayurved Medical College, Latur</td>
+                    <td><span class="rank-cell rank-open">50,401</span></td>
+                    <td><span class="rank-cell rank-close">174,538</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="only-year">2025 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Vasantdada Patil Ayurvedic Medical College, Sangli</td>
+                    <td><span class="rank-cell rank-open">71,686</span></td>
+                    <td><span class="rank-cell rank-close">99,544</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="only-year">2025 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Shamrao Patil Institute of Ayurveda Research Center, Paniv</td>
+                    <td><span class="rank-cell rank-open">76,796</span></td>
+                    <td><span class="rank-cell rank-close">295,796</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="only-year">2025 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Sanjivani Ayurveda College and Research Center, Kopargaon</td>
+                    <td><span class="rank-cell rank-open">81,051</span></td>
+                    <td><span class="rank-cell rank-close">228,946</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="only-year">2025 only</span></td>
+                </tr>
+
+                <!-- ===== 2024 ONLY ===== -->
+                <tr>
+                    <td class="college-name">Shri Ayurved Mahavidyalaya, Nagpur</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">52,355</span></td>
+                    <td><span class="rank-cell rank-2024-close">59,225</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Government Ayurveda College and Hospital, Jalgaon</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">53,865</span></td>
+                    <td><span class="rank-cell rank-2024-close">58,649</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">RJVS Bhaisaheb Sawant Ayurved Mahavidyalaya, Sawantwadi</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">61,653</span></td>
+                    <td><span class="rank-cell rank-2024-close">61,851</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">KVTR Ayurved College, Boradi</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">60,370</span></td>
+                    <td><span class="rank-cell rank-2024-close">71,664</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Hanuman Shikshan Prasarak Mandal's Ayurvedic Medical College, Peth Vadgaon</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">8,426</span></td>
+                    <td><span class="rank-cell rank-2024-close">8,426</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">MES Ayurved Mahavidyalaya, Ratnagiri</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">13,018</span></td>
+                    <td><span class="rank-cell rank-2024-close">13,018</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Sau Surekhatai Prakash Kolpe Ayurveda College, Ahmednagar</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">30,460</span></td>
+                    <td><span class="rank-cell rank-2024-close">30,460</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Ramrao Patil Ayurved Mahavidyalaya, Prabhani</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">40,756</span></td>
+                    <td><span class="rank-cell rank-2024-close">40,756</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Shree Saptshrungi Ayurved Mahavidyalay, Nashik</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">80,605</span></td>
+                    <td><span class="rank-cell rank-2024-close">80,605</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Lt Sunil Ramshingji Chunawale Ayurved College, Chikhali</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">87,630</span></td>
+                    <td><span class="rank-cell rank-2024-close">87,630</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Dhaneshwari Ayurved Hospital & Research Institute, Aurangabad</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">87,858</span></td>
+                    <td><span class="rank-cell rank-2024-close">87,858</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Anandi Shikshan Prasark Mandal Ayurved College, Nagpur</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">91,969</span></td>
+                    <td><span class="rank-cell rank-2024-close">91,969</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Bhojraj Bhondekar Ayurvedic Mahavidyalaya, Bhandara</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">93,499</span></td>
+                    <td><span class="rank-cell rank-2024-close">93,499</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+                <tr>
+                    <td class="college-name">Rural Institute of Ayurved Research Center, Satara</td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span style="color:#6b7f8b;">—</span></td>
+                    <td><span class="rank-cell rank-2024-open">95,640</span></td>
+                    <td><span class="rank-cell rank-2024-close">95,640</span></td>
+                    <td><span class="only-year">2024 only</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footnote">
+        <strong>📌 Opening & Closing ranks</strong> — Data sourced from the Maharashtra NEET 2025 & 2024 BAMS cutoff tables. 
+        Colleges with both years are shown side-by-side. If a college appears in only one year, the missing year’s cells show “—”. 
+        <span style="display:inline-block; margin-left:0.8rem; background:#d1e4ef; padding:0.1rem 0.8rem; border-radius:30px;">● 2025</span> 
+        <span style="background:#dce8f0; padding:0.1rem 0.8rem; border-radius:30px;">● 2024</span>
+    </div>
+</div>
+</body>
+</html>
